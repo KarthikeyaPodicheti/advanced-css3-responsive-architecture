@@ -31,32 +31,32 @@ nav a { display: inline-block; padding: 0.6rem 0.9rem; border-radius: 8px; text-
 nav a:hover { background: #eef2ff; color: var(--ink); }
 nav a[aria-current="page"] { background: var(--ink); color: #fff; }
 .nav-toggle { display: none; border: 2px solid var(--ink); background: #fff; border-radius: 8px; padding: 0.5rem 1rem; font-weight: 700; }
-main { padding-block: 2rem 3rem; }
-main .container { display: grid; gap: 1.5rem; }
+main { display: grid; gap: 4rem; padding-block: 3.5rem 4rem; }
+main .container { display: grid; gap: 1.5rem; align-content: start; }
+.hero { padding-block: 0.5rem; }
+.hero h1 { letter-spacing: -0.02em; line-height: 1.08; }
+.actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.card { display: grid; gap: 0.75rem; align-content: start; }
 h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.25; }
+h1 { line-height: 1.1; }
+p { text-wrap: pretty; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.15rem; }
-.lead { font-size: 1.15rem; color: var(--muted); max-width: 55ch; }
-.actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-.btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: 10px; text-decoration: none; font-weight: 700; border: 2px solid transparent; cursor: pointer; }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 55ch; line-height: 1.7; }
+.btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: 10px; text-decoration: none; font-weight: 700; border: 2px solid transparent; cursor: pointer; line-height: 1.4; }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-dark); color: #fff; }
 .btn-secondary { border-color: var(--ink); color: var(--ink); background: #fff; }
 .btn-secondary:hover { background: var(--ink); color: #fff; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.grid-3 > article, .grid-2 > article, .grid-2 > section, .card, aside, form {
+.grid-3 > article, .grid-2 > article, .grid-2 > section, .card, aside {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem;
 }
-.field { display: grid; gap: 0.35rem; }
-label { font-weight: 700; }
-.hint { font-size: 0.875rem; color: var(--muted); }
-.error { color: #b91c1c; font-weight: 600; font-size: 0.9rem; }
-input, textarea { font: inherit; padding: 0.7rem 0.85rem; border: 2px solid #94a3b8; border-radius: 8px; width: 100%; }
-input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b91c1c; }
-#form-status:empty { display: none; }
-#form-status { font-weight: 700; }
-address { font-style: normal; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin-block: 0.75rem; }
+.tags li { background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+.card p + p { margin-top: 0.75rem; }
 footer { background: var(--ink); color: #e2e8f0; padding-block: 1.5rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 footer a { color: #fff; }
