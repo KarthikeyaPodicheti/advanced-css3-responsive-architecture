@@ -16,9 +16,11 @@ Use semantic tags (
 ,
 ,
 )
+
 Implement ARIA labels and roles for screen readers
 Create optimized, SEO-friendly meta tags
 Include an accessible, tab-navigable contact form
+
 Expected Outcome:
 A fully accessible, semantic skeleton of a portfolio website that scores 100 on Lighthouse Accessibility and SEO audits
 
