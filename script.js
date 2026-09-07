@@ -75,7 +75,7 @@
       form.querySelector('[aria-invalid="true"]').focus();
       return;
     }
-    status.textContent = "Thanks " + name.split(" ")[0] + "! Your message is ready — your email app should open to send it.";
+    status.textContent = "Thanks " + name.split(" ")[0] + "! Your message is ready - your email app should open to send it.";
     form.submit();
   });
 })();

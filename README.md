@@ -1,63 +1,40 @@
-# Internship Portfolio — P Karthikeya
+# Advanced CSS3 & Responsive Architecture — P Karthikeya
 
-Hi, I'm **P Karthikeya**, a front-end web development student at Methodist College of Engineering & Technology, Hyderabad. This is my personal portfolio website, which I built as the first task of my web development internship.
+Hi, I'm **P Karthikeya**, a front-end web development student at Methodist College of Engineering & Technology, Hyderabad. This is the second task of my web development internship, where I transformed my semantic portfolio into a fully responsive design using advanced CSS3.
 
 **Live pages:** Home (`index.html`) · About (`about.html`) · Projects (`projects.html`) · Contact (`contact.html`)
 
-## How I Made This Website
+## How I Made This Responsive Design
 
-### 1. I planned the structure first
-Before writing any code, I decided what each page needed to do:
-- **Home** — introduce who I am, what I do, and highlight my best work
-- **About** — share my background, skills, education, and selected projects
-- **Projects** — show my real website projects from GitHub with live demo links
-- **Contact** — give visitors an accessible way to reach me
+### 1. I rebuilt the CSS mobile-first
+I threw out the desktop-first stylesheet and rewrote `style.css` starting from the smallest screen. My base styles target mobile phones, then I layer on complexity with `min-width` media queries — 640px for larger phones/tablets and 960px for desktop. This way small devices only download and apply what they need.
 
-I kept one shared design system (`style.css`) and one shared behavior file (`script.js`) so every page looks and behaves consistently.
+### 2. I used CSS Grid for page layouts
+I used Grid for every two-dimensional layout on the site:
+- The hero section becomes a Grid area layout on desktop (title, lead, and actions in named areas)
+- The skills section uses a Grid that goes 1 column on mobile, 2 on tablet, and 3 on desktop
+- The featured projects use a 2-column Grid on desktop and stack on mobile
+- The About page bio/skills pair and the Contact form/info pair share the same responsive Grid
 
-### 2. I wrote semantic HTML5
-I used proper landmark elements on every page instead of generic `div`s:
-- `header` for the site banner and logo
-- `nav` (with `aria-label="Primary"` and `aria-label="Footer"`) for navigation
-- `main` with `id="main-content"` as the primary content area
-- `section`, `article`, and `aside` to give each block of content real meaning
-- `footer` for the closing site info
+### 3. I used Flexbox for component alignment
+I used Flexbox everywhere alignment is one-dimensional:
+- The header row (logo, nav, and theme/menu buttons) is a Flex container
+- The nav link list is a horizontal Flex row on desktop and a vertical Flex column in the mobile dropdown
+- The hero buttons wrap with Flex so they stack gracefully on narrow screens
+- The footer spreads its items with Flex and wraps on small screens
+- The technology tags wrap with Flex so they flow onto new lines
 
-I made sure each page has exactly one `h1` and headings follow a logical order (`h1` → `h2` → `h3`), which helps both screen readers and search engines understand the page.
+### 4. I built a light/dark theme with CSS variables
+I defined every color as a custom property in `:root` (background, surface, ink, muted text, accent, borders, tags, error, focus ring, shadows). The dark theme is a single `[data-theme="dark"]` block that overrides those variables — no duplicated selectors. A toggle button in the header flips the attribute, and I persist the choice in `localStorage` so it survives reloads. I also respect the visitor's OS preference on first load, and a tiny inline script in the `<head>` applies the saved theme before first paint so there's no flash.
 
-### 3. I made it accessible (WCAG)
-Accessibility was a core requirement, so I built it in from the start:
-- I added a **skip-to-content link** so keyboard users can jump past the navigation
-- I marked the current page with **`aria-current="page"`** so screen readers announce where the visitor is
-- I gave every form field a visible **`<label>`**, a hint paragraph (`aria-describedby`), and its own error message area
-- I used **`aria-invalid="true"`** on invalid fields and a **`role="status"` live region** so errors are announced automatically
-- I added strong **`:focus-visible`** outlines so keyboard focus is always visible
-- I made the mobile menu closable with the **Escape** key and return focus to the toggle button
-- I respected **`prefers-reduced-motion`** and kept color contrast above 4.5:1
-- I tested tab order on the contact page: skip link → nav → name → email → message → submit
+### 5. I kept accessibility and SEO intact
+The Task 1 foundation still holds: semantic landmarks, skip link, `aria-current`, labeled form with live error announcements, unique SEO meta per page, and JSON-LD on Home. I re-ran the axe accessibility audit on all four pages after the restyle — **0 violations** everywhere. I also fixed a real issue the audit caught: my first gradient hero failed contrast checks, so I replaced it with a solid surface and an accent top border.
 
-### 4. I added SEO best practices
-I gave every page a unique `<title>` and `<meta name="description">`, plus:
-- `lang="en"` and a responsive `viewport` meta tag
-- Open Graph tags for rich link previews
-- `theme-color` and an inline SVG favicon
-- **JSON-LD `Person` structured data** on the home page
-- Descriptive link text (no "click here") and semantic headings
-
-### 5. I built the contact form with JavaScript validation
-I wrote vanilla JavaScript (no libraries) that:
-- Validates name (min 2 characters), email (regex check), and message (min 10 characters) on submit
-- Shows a specific error under each invalid field and moves focus to the first error
-- Announces a summary in the live status region
-- Only submits (via `mailto:`) when every field is valid
-
-### 6. I styled it with a shared CSS system
-I used CSS custom properties (variables) for colors, spacing, and radius so the whole site stays consistent. The layout uses CSS Grid for page sections and card grids, and Flexbox for the header, nav, and buttons. A single media query collapses multi-column layouts on small screens and turns the nav into a toggle menu.
-
-### 7. I verified my work
-- I ran Chrome's **axe accessibility audit** on all four pages — **0 violations** everywhere
-- I tested the form with invalid input and confirmed every error appears and is announced
-- I checked the tab order and Escape-to-close menu behavior with the keyboard
+### 6. I verified mobile, tablet, and desktop
+I tested the site at 390px (phone), 768px (tablet), and 1280px (desktop):
+- The nav collapses into a Menu button below 960px, opening a full-width dropdown that closes with Escape
+- Cards stack vertically on phones and spread into grids on larger screens
+- The theme toggle works at every width and the choice persists across pages
 
 ## My Projects (from my GitHub)
 
@@ -71,10 +48,6 @@ I used CSS custom properties (variables) for colors, spacing, and radius so the 
 ## How to Run It
 
 Just open `index.html` in any browser, or use VS Code's Live Server extension for auto-reload.
-
-## Lighthouse Check
-
-Open Chrome DevTools → Lighthouse → run Accessibility + SEO audits — the site is built to score ~100 on both.
 
 ## Contact Me
 
