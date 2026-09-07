@@ -57,6 +57,16 @@ h3 { font-size: 1.15rem; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin-block: 0.75rem; }
 .tags li { background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
 .card p + p { margin-top: 0.75rem; }
+form { display: grid; gap: 1rem; }
+.field { display: grid; gap: 0.35rem; }
+label { font-weight: 700; }
+.hint { font-size: 0.875rem; color: var(--muted); }
+.error { color: #b91c1c; font-weight: 600; font-size: 0.9rem; }
+input, textarea { font: inherit; padding: 0.7rem 0.85rem; border: 2px solid #94a3b8; border-radius: 8px; width: 100%; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b91c1c; }
+#form-status:empty { display: none; }
+#form-status { font-weight: 700; }
+address { font-style: normal; }
 footer { background: var(--ink); color: #e2e8f0; padding-block: 1.5rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 footer a { color: #fff; }

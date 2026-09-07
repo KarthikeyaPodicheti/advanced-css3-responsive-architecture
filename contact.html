@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | P Karthikeya — Front-End Developer</title>
+  <meta name="description" content="Contact P Karthikeya for internships and freelance front-end work. Accessible contact form with keyboard support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact P Karthikeya" />
+  <meta property="og:description" content="Get in touch about internships and freelance work." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html">P Karthikeya<span aria-hidden="true">.</span></a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="container">
+      <h1>Contact me</h1>
+      <p class="lead">Every field is labeled and errors are announced to screen readers.</p>
+      <div class="grid-2">
+        <section aria-labelledby="form-heading">
+          <h2 id="form-heading">Send a message</h2>
+          <p id="form-status" role="status" aria-live="polite"></p>
+          <form id="contact-form" action="mailto:karthikeya@example.com" method="post" enctype="text/plain" novalidate>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-hint name-error" minlength="2" />
+              <p class="hint" id="name-hint">Enter your first and last name.</p>
+              <p class="error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint email-error" />
+              <p class="hint" id="email-hint">I'll only use this to reply to you.</p>
+              <p class="error" id="email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-hint message-error" minlength="10"></textarea>
+              <p class="hint" id="message-hint">Minimum 10 characters.</p>
+              <p class="error" id="message-error" hidden></p>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </section>
+        <aside aria-labelledby="info-heading">
+          <h2 id="info-heading">Other ways to reach me</h2>
+          <address>
+            Email: <a href="mailto:karthikeyapodicheti25@gmail.com">karthikeya@example.com</a><br />
+            GitHub: <a href="https://github.com/KarthikeyaPodicheti" rel="noopener me">KarthikeyaPodicheti</a>
+          </address>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 P Karthikeya.</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
