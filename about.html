@@ -4,13 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Alex Carter — Front-End Developer</title>
-  <meta name="description" content="About Alex Carter: front-end developer focused on semantic HTML5, WCAG accessibility, and SEO. Skills, experience, and education." />
-  <meta name="author" content="Alex Carter" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="About Alex Carter: front-end developer focused on semantic HTML5, WCAG accessibility, and SEO." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="About Alex Carter" />
-  <meta property="og:description" content="Skills, experience and education of front-end developer Alex Carter." />
+  <meta property="og:description" content="Skills and experience of front-end developer Alex Carter." />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,9 +16,9 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Alex Carter — home">Alex Carter<span aria-hidden="true">.</span></a>
+      <a class="logo" href="index.html">Alex Carter<span aria-hidden="true">.</span></a>
       <nav aria-label="Primary">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">Menu</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
         <ul id="primary-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
@@ -31,58 +29,48 @@
     </div>
   </header>
   <main id="main-content">
-    <div class="container page-head">
-      <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol></nav>
+    <div class="container">
       <h1>About me</h1>
-      <p class="lead">Web development intern passionate about accessible, semantic web.</p>
-    </div>
-    <div class="container grid-2">
-      <article aria-labelledby="bio-heading">
-        <h2 id="bio-heading">Bio</h2>
-        <figure>
-          <img src="https://via.placeholder.com/400x400.png?text=Alex" alt="Photo of Alex Carter" width="400" height="400" loading="lazy" />
-          <figcaption>Alex Carter — Chennai, India</figcaption>
-        </figure>
-        <p>I'm a front-end developer who cares about the fundamentals: valid semantic HTML, keyboard-first interaction, and honest SEO. My goal is interfaces everyone can use.</p>
-      </article>
-      <div>
+      <p class="lead">Web development intern passionate about the accessible, semantic web.</p>
+      <div class="grid-2">
+        <article aria-labelledby="bio-heading">
+          <h2 id="bio-heading">Bio</h2>
+          <p>I'm a front-end developer who cares about the fundamentals: valid semantic HTML, keyboard-first interaction, and honest SEO.</p>
+        </article>
         <section aria-labelledby="skills-heading">
           <h2 id="skills-heading">Skills</h2>
-          <ul class="tags" role="list">
-            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>ARIA &amp; WCAG</li><li>SEO</li><li>Git &amp; GitHub</li>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>ARIA &amp; WCAG</li>
+            <li>Git &amp; GitHub</li>
           </ul>
-          <h3>Proficiency</h3>
-          <ul class="meter-list">
-            <li><span id="m-html">HTML5</span><meter aria-labelledby="m-html" min="0" max="100" value="90">90%</meter></li>
-            <li><span id="m-css">CSS3</span><meter aria-labelledby="m-css" min="0" max="100" value="80">80%</meter></li>
-            <li><span id="m-js">JavaScript</span><meter aria-labelledby="m-js" min="0" max="100" value="70">70%</meter></li>
-          </ul>
-        </section>
-        <section aria-labelledby="exp-heading">
-          <h2 id="exp-heading">Experience</h2>
-          <ol class="timeline">
-            <li><article><h3>Web Dev Intern — Example Co.</h3><p><time datetime="2026-06">Jun 2026</time> – Present · Building accessible landing pages.</p></article></li>
-            <li><article><h3>Freelance — Personal clients</h3><p><time datetime="2025-01">2025</time> · Shipped 5 portfolio and business sites.</p></article></li>
-          </ol>
         </section>
       </div>
+      <section aria-labelledby="exp-heading">
+        <h2 id="exp-heading">Experience</h2>
+        <article>
+          <h3>Web Dev Intern — Example Co.</h3>
+          <p><time datetime="2026-06">Jun 2026</time> – Present · Building accessible landing pages.</p>
+        </article>
+        <article>
+          <h3>Freelance — Personal clients</h3>
+          <p><time datetime="2025">2025</time> · Shipped 5 portfolio and business sites.</p>
+        </article>
+      </section>
     </div>
-    <section class="container" aria-labelledby="edu-heading">
-      <h2 id="edu-heading">Education</h2>
-      <table>
-        <caption>Education history</caption>
-        <thead><tr><th scope="col">Year</th><th scope="col">Qualification</th><th scope="col">Institute</th></tr></thead>
-        <tbody>
-          <tr><td><time datetime="2024">2024</time></td><td>B.Sc. Computer Science</td><td>Example University</td></tr>
-          <tr><td><time datetime="2026">2026</time></td><td>Web Accessibility (W3C course)</td><td>edX</td></tr>
-        </tbody>
-      </table>
-    </section>
   </main>
   <footer>
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Alex Carter.</p>
-      <nav aria-label="Footer"><ul><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <p>© 2026 Alex Carter.</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
   <script src="script.js" defer></script>
