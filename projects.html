@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Alex Carter — Portfolio</title>
+  <meta name="description" content="Projects by Alex Carter: accessible shop front, semantic blog, and form UI — all built with semantic HTML5 and WCAG practices." />
+  <meta name="author" content="Alex Carter" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects — Alex Carter" />
+  <meta property="og:description" content="Case studies of semantic, accessible front-end projects." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Alex Carter — home">Alex Carter<span aria-hidden="true">.</span></a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">Menu</button>
+        <ul id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="container page-head">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Projects</li></ol></nav>
+      <h1>Projects</h1>
+      <p class="lead">Semantic markup, accessible components, and honest SEO on every build.</p>
+    </div>
+    <div class="container project-list">
+      <article class="card card-horizontal" id="project-1" aria-labelledby="p1-title">
+        <img src="https://via.placeholder.com/640x360.png?text=E-Commerce" alt="Accessible shop front showing product grid with keyboard focus ring" width="640" height="360" loading="lazy" />
+        <div class="card-body">
+          <h2 id="p1-title">Accessible Shop Front</h2>
+          <p>Store UI using <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code> landmarks. Product list uses <code>ul</code> + <code>article</code>, prices use semantic markup, cart button exposes <code>aria-live</code> totals.</p>
+          <ul class="tags" role="list" aria-label="Technologies used"><li>HTML5</li><li>CSS</li><li>ARIA</li></ul>
+          <p><a href="contact.html">Discuss this build</a> · <a href="https://github.com/" rel="noopener">Source on GitHub</a></p>
+        </div>
+      </article>
+      <article class="card card-horizontal" id="project-2" aria-labelledby="p2-title">
+        <img src="https://via.placeholder.com/640x360.png?text=Blog" alt="Semantic blog with article, figure and time elements" width="640" height="360" loading="lazy" />
+        <div class="card-body">
+          <h2 id="p2-title">Semantic Blog</h2>
+          <p>Long-form layout with one <code>h1</code> per page, <code>article</code> + <code>time datetime</code> for posts, <code>figure</code>/<code>figcaption</code>, and JSON-LD BlogPosting schema.</p>
+          <ul class="tags" role="list" aria-label="Technologies used"><li>HTML5</li><li>SEO</li><li>JSON-LD</li></ul>
+          <p><a href="contact.html">Discuss this build</a> · <a href="https://github.com/" rel="noopener">Source on GitHub</a></p>
+        </div>
+      </article>
+      <article class="card card-horizontal" id="project-3" aria-labelledby="p3-title">
+        <img src="https://via.placeholder.com/640x360.png?text=Contact+Form" alt="Accessible contact form with visible labels and error messages" width="640" height="360" loading="lazy" />
+        <div class="card-body">
+          <h2 id="p3-title">Accessible Contact Form</h2>
+          <p>Tab-navigable form with visible <code>label</code>s, <code>aria-describedby</code> hints, <code>aria-invalid</code> errors, and an <code>aria-live</code> status region.</p>
+          <ul class="tags" role="list" aria-label="Technologies used"><li>HTML5</li><li>JavaScript</li><li>WCAG</li></ul>
+          <p><a href="contact.html">Try the live form</a> · <a href="https://github.com/" rel="noopener">Source on GitHub</a></p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Alex Carter.</p>
+      <nav aria-label="Footer"><ul><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

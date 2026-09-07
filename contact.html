@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Alex Carter — Hire Me</title>
+  <meta name="description" content="Contact Alex Carter for internships and freelance front-end work. Accessible contact form with keyboard support and clear error messages." />
+  <meta name="author" content="Alex Carter" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Alex Carter" />
+  <meta property="og:description" content="Get in touch about internships and freelance work." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Alex Carter — home">Alex Carter<span aria-hidden="true">.</span></a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">Menu</button>
+        <ul id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="container page-head">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+      <h1>Contact me</h1>
+      <p class="lead">Tab through this form — every field is labeled and errors are announced to screen readers.</p>
+    </div>
+    <div class="container grid-2">
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Send a message</h2>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <form id="contact-form" action="mailto:alex@example.com" method="post" enctype="text/plain" novalidate>
+          <div class="field">
+            <label for="name">Full name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="name-hint name-error" minlength="2" />
+            <p class="hint" id="name-hint">Enter your first and last name.</p>
+            <p class="error" id="name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-hint email-error" inputmode="email" />
+            <p class="hint" id="email-hint">I'll only use this to reply to you.</p>
+            <p class="error" id="email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="topic">Topic <span aria-hidden="true">*</span></label>
+            <select id="topic" name="topic" required aria-required="true" aria-describedby="topic-error">
+              <option value="">Choose a topic…</option>
+              <option value="internship">Internship</option>
+              <option value="freelance">Freelance project</option>
+              <option value="other">Other</option>
+            </select>
+            <p class="error" id="topic-error" hidden></p>
+          </div>
+          <fieldset>
+            <legend>Preferred contact method</legend>
+            <label><input type="radio" name="contact-method" value="email" checked /> Email</label>
+            <label><input type="radio" name="contact-method" value="phone" /> Phone</label>
+          </fieldset>
+          <div class="field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-hint message-error" minlength="10"></textarea>
+            <p class="hint" id="message-hint">Minimum 10 characters. Tell me about your project.</p>
+            <p class="error" id="message-error" hidden></p>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="consent-error" />
+            <label for="consent">I consent to my details being used to reply <span aria-hidden="true">*</span></label>
+          </div>
+          <p class="error" id="consent-error" hidden></p>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </section>
+      <aside aria-labelledby="info-heading">
+        <h2 id="info-heading">Other ways to reach me</h2>
+        <address>
+          <p>Email: <a href="mailto:alex@example.com">alex@example.com</a></p>
+          <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p>Location: Chennai, India</p>
+        </address>
+        <h3>Office hours</h3>
+        <p>Monday–Friday, <time datetime="09:00">9:00</time>–<time datetime="17:00">17:00</time> IST</p>
+        <h3>Socials</h3>
+        <ul>
+          <li><a href="https://github.com/" rel="noopener me">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" rel="noopener me">LinkedIn</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Alex Carter.</p>
+      <nav aria-label="Footer"><ul><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
