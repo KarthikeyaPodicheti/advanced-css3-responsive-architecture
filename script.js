@@ -1,4 +1,25 @@
 (function () {
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+  function paintToggle(btn, theme) {
+    var dark = theme === "dark";
+    btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    btn.textContent = dark ? "Light" : "Dark";
+  }
+  var themeBtn = document.querySelector(".theme-toggle");
+  if (themeBtn) {
+    paintToggle(themeBtn, currentTheme());
+    themeBtn.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      if (next === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      else document.documentElement.removeAttribute("data-theme");
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      paintToggle(themeBtn, next);
+    });
+  }
+
   var toggle = document.querySelector(".nav-toggle");
   var menu = document.getElementById("primary-menu");
   if (toggle && menu) {

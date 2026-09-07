@@ -11,6 +11,15 @@
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -18,7 +27,6 @@
     <div class="container header-inner">
       <a class="logo" href="index.html">P Karthikeya<span aria-hidden="true">.</span></a>
       <nav aria-label="Primary">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
         <ul id="primary-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
@@ -26,6 +34,10 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">Dark</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
     </div>
   </header>
   <main id="main-content">
